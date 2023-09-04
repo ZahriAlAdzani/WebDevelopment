@@ -1,0 +1,126 @@
+@font-face {
+  font-family: "Cartoon";
+  src: url("font/cartoon.ttf") format("truetype");
+}
+
+.game {
+  width: 600px;
+  height: 200px;
+  border: 1px solid black;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+#dino {
+  width: 50px;
+  height: 50px;
+  background-image: url(img/dino-run-0.png);
+  background-size: 50px 50px;
+  position: relative;
+  top: 150px;
+}
+
+.jump {
+  animation: jump 0.3s linear;
+}
+
+@keyframes jump {
+  0% {
+    top: 150px;
+  }
+
+  30% {
+    top: 130px;
+  }
+
+  50% {
+    top: 80px;
+  }
+
+  80% {
+    top: 130px;
+  }
+
+  100% {
+    top: 150px;
+  }
+}
+
+#cactus {
+  width: 20px;
+  height: 40px;
+  position: relative;
+  top: 110px;
+  left: 580px;
+
+  background-image: url("img/cactus.png");
+  background-size: 20px 40px;
+
+  animation: block 1s infinite linear;
+}
+
+@keyframes block {
+  0% {
+    left: 580px;
+  }
+
+  100% {
+    left: -20px;
+  }
+}
+
+.ground {
+  width: 200%; /* Make the ground twice as wide as the container to stretch it */
+  height: 20px;
+  background-image: url("img/ground.png"); /* Replace with your ground image path */
+  background-repeat: repeat; /* Repeat the image both horizontally and vertically */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  animation: groundMove 15s linear infinite;
+}
+
+#ground {
+  animation-delay: 0s; /* Start immediately */
+}
+
+@keyframes groundMove {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(
+      -50%
+    ); /* Translate it to the left by half its width */
+  }
+}
+
+#score {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 10px 20px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Cartoon", sans-serif; /* Use your custom font here */
+}
+
+.high-score {
+  position: absolute;
+  top: 30%; /* Adjust the positioning as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  padding: 10px 20px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Cartoon", sans-serif; /* Use your custom font here */
+}

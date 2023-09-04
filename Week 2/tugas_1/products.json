@@ -1,0 +1,20 @@
+[
+    {
+      "id": 1,
+      "image": "image/1.png",
+      "name": "Krabby Patty",
+      "price": 99.99
+    },
+    {
+      "id": 2,
+      "image": "image/2.png",
+      "name": "Sausage Drink",
+      "price": 79.99
+    },
+    {
+      "id": 3,
+      "image": "image/3.png",
+      "name": "Krusty Dogs",
+      "price": 89.99
+    }
+  ]
